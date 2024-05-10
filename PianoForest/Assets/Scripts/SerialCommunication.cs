@@ -22,7 +22,7 @@ public class SerialCommunication : MonoBehaviour {
     {
         string message = data_stream.ReadLine(); // Read a line of data
         Debug.Log("Message from Arduino: " + message);
-        if (message == "clicked") {
+        if (message.Trim() == "white") {
             GenerateRandomCube();
         }
         
@@ -31,6 +31,7 @@ public class SerialCommunication : MonoBehaviour {
     void Update()
     {
         StartCoroutine(Incoming());
+        
     }
 
     public void GenerateRandomCube()
