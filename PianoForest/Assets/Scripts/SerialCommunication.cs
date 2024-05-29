@@ -18,19 +18,23 @@ public class SerialCommunication : MonoBehaviour {
     // black key: play music
     public GameObject audio_one;
     public GameObject audio_two;
-    public GameObject rain_mode;
+    
     public GameObject audio_four;
     public GameObject audio_five;
 
     // huge red button
-    public GameObject dayLight;
+    public GameObject Rain;
+    public GameObject Day;
+    public GameObject Night;
+
 
     void Awake() {
         audio_one.SetActive(false);
         audio_two.SetActive(false);
-        rain_mode.SetActive(false);
         audio_four.SetActive(false);
         audio_five.SetActive(false);
+        Rain.SetActive(false);
+        Night.SetActive(false);
     }
 
     void Start() //Awake() is called before Start()
@@ -80,7 +84,7 @@ public class SerialCommunication : MonoBehaviour {
                     ObjectControl(audio_two);
                     break;
                 case "black_3":
-                    ObjectControl(rain_mode);
+                    RainControl();
                     break;
                 case "black_4":
                     ObjectControl(audio_four);
@@ -121,10 +125,23 @@ public class SerialCommunication : MonoBehaviour {
     }
 
     public void LightControl() {
-        if (dayLight.activeInHierarchy) {
-            dayLight.SetActive(false);
+        // Turning to night
+        if (Day.activeInHierarchy) {
+            Day.SetActive(false);
+            Night.SetActive(true);
         } else {
-            dayLight.SetActive(true);
+            Day.SetActive(true);
+            Night.SetActive(false);
+        }
+    }
+
+    public void RainControl() {
+        if (Day.activeInHierarchy) {
+            Day.SetActive(false);
+            Rain.SetActive(true);
+        } else {
+            Day.SetActive(true);
+            Rain.SetActive(false);
         }
     }
 
