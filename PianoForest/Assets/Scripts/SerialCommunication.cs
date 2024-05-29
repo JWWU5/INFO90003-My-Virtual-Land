@@ -40,7 +40,7 @@ public class SerialCommunication : MonoBehaviour {
     void Start() //Awake() is called before Start()
     {
         //Open the serial stream
-        data_stream = new SerialPort("/dev/cu.usbserial-574A0023111", 9600);
+        data_stream = new SerialPort("/dev/cu.usbserial-56E40389571", 9600);
         data_stream.Open();
         data_stream.WriteLine("1");
         StartCoroutine(Incoming());
@@ -93,7 +93,7 @@ public class SerialCommunication : MonoBehaviour {
                     ObjectControl(audio_five);
                     break;
                 // red button
-                case "daytime_change":
+                case "day_change":
                     LightControl();
                     break;
                 // reset button
