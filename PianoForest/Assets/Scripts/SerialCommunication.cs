@@ -95,17 +95,14 @@ public class SerialCommunication : MonoBehaviour {
                 // red button
                 case "day_change":
                     LightControl();
+                    ObjectControl(audio_five);
                     break;
                 // reset button
                 case "reset":
                     SceneManager.LoadScene(0);
                     break;
-               
             }
            
-
-            
-            
             yield return null;
         }
     }
