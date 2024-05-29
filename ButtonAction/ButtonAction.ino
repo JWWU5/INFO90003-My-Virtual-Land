@@ -12,6 +12,11 @@ int blackThree = 34;
 int blackFour = 39;
 int blackFive = 36;
 
+int resetBtn = 8;
+int hugeRedBtn = 37;
+int volumnChange = 4;
+int fan = 7;
+
 // store button's last condition
 bool lastWhiteOne = LOW;
 bool lastWhiteTwo = LOW;
@@ -26,6 +31,11 @@ bool lastBlackTwo = LOW;
 bool lastBlackThree = LOW;
 bool lastBlackFour = LOW;
 bool lastBlackFive = LOW;
+
+bool lastResetBtn = LOW;
+bool lastHugeRedBtn = LOW;
+
+bool isFanOn = false;
 
 void setup() {
   // put your setup code here, to run once:
@@ -43,6 +53,11 @@ void setup() {
   pinMode(blackThree, INPUT);
   pinMode(blackFour, INPUT);
   pinMode(blackFive, INPUT);
+
+  pinMode(resetBtn, INPUT);
+  pinMode(hugeRedBtn, INPUT); // change from day to night
+
+  pinMode(fan, OUTPUT);
 }
 
 void loop() {
@@ -59,6 +74,9 @@ void loop() {
   bool curBlackThree = digitalRead(blackThree);
   bool curBlackFour = digitalRead(blackFour);
   bool curBlackFive = digitalRead(blackFive);
+
+  bool curResetBtn = digitalRead(resetBtn);
+  bool curHugeRedBtn = digitalRead(hugeRedBtn);
 
   if (lastWhiteOne == LOW && curWhiteOne == HIGH) { 
     Serial.println("white_1");
@@ -88,15 +106,36 @@ void loop() {
   if (lastBlackTwo == LOW && curBlackTwo == HIGH) { 
     Serial.println("black_2");
   }
+  // black three control the raining mode
   if (lastBlackThree == LOW && curBlackThree == HIGH) { 
     Serial.println("black_3");
-  }
+    if (isFanOn) {
+      Serial.println("fan on");
+      analogWrite(fan, 0); // trun off the fan
+      isFanOn = false;
+    } else {
+      Serial.println("fan off");
+      analogWrite(fan, 255); // trun on the fan
+      isFanOn = true;
+    }
+    
+  } 
   if (lastBlackFour == LOW && curBlackFour == HIGH) { 
     Serial.println("black_4");
   }
   if (lastBlackFive == LOW && curBlackFive == HIGH) { 
     Serial.println("black_5");
   }
+
+  if (lastResetBtn == LOW && curResetBtn == HIGH) {
+    Serial.println("reset");
+  }
+  if (lastHugeRedBtn == LOW && curHugeRedBtn == HIGH) {
+    Serial.println("day_change");
+  }
+
+  int inputValue = analogRead(volumnChange);
+  //Serial.println(inputValue);
 
   lastWhiteOne = curWhiteOne;
   lastWhiteTwo = curWhiteTwo;
@@ -112,7 +151,13 @@ void loop() {
   lastBlackFour = curBlackFour;
   lastBlackFive = curBlackFive;
 
+  lastResetBtn = curResetBtn;
+  lastHugeRedBtn = curHugeRedBtn;
+
 
   delay(50);
 
+
+
 }
+
