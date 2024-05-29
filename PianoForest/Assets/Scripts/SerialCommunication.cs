@@ -26,7 +26,11 @@ public class SerialCommunication : MonoBehaviour {
     public GameObject dayLight;
 
     void Awake() {
-        //black_three.SetActive(false);
+        audio_one.SetActive(false);
+        audio_two.SetActive(false);
+        rain_mode.SetActive(false);
+        audio_four.SetActive(false);
+        audio_five.SetActive(false);
     }
 
     void Start() //Awake() is called before Start()
