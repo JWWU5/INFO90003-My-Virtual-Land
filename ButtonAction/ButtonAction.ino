@@ -78,6 +78,7 @@ void loop() {
   bool curResetBtn = digitalRead(resetBtn);
   bool curHugeRedBtn = digitalRead(hugeRedBtn);
 
+  Serial.println("");
   if (lastWhiteOne == LOW && curWhiteOne == HIGH) { 
     Serial.println("white_1");
   }

@@ -101,6 +101,9 @@ public class SerialCommunication : MonoBehaviour {
                 case "reset":
                     SceneManager.LoadScene(0);
                     break;
+                
+                default:
+                    break;
             }
            
             yield return null;
