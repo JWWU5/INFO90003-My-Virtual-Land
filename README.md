@@ -21,7 +21,7 @@
 - [Full Report](INFO90003_Assignment2_MyVirtualLand_Kelvin.pdf)
 
 ## Overview
-Stress and anxiety have been shown to be greatly reduced by yoga and meditation. “My Virtual Land" is an interactive device that is intended to improve the quality of yoga and meditation sessions by incorporating visual and auditory technologies, thereby establishing a more immersive and natural environment. The system processes user inputs from sensors using an ESP32 microcontroller, which allows for real-time auditory feedback and personalised interaction with virtual scenes through Unity. High levels of satisfaction with the system's interactivity and functionality have been reported by users, underscoring its efficacy in alleviating anxiety. Future improvements will concentrate on the optimisation of the natural element distribution algorithm and the enhancement of data transmission stability between Unity and ESP32.
+Stress and anxiety have been shown to be greatly reduced by immersive, interactive experiences. "My Virtual Land" is an interactive device designed to enhance relaxation and mindfulness by incorporating visual and auditory feedback. The system features an interactive piano interface paired with a dynamic virtual environment displayed on a monitor, creating a soothing and engaging user experience. Using an ESP32 microcontroller, the device processes real-time user inputs from sensors, enabling personalized interaction with the virtual scene rendered in Unity. User feedback has indicated high satisfaction with the system’s interactivity and calming effects, demonstrating its potential for anxiety relief. 
 <p align="center">
   <img src="Images/final-product.png" width="500">
   <br>
@@ -50,6 +50,7 @@ The processed signals are sent to two types of output:
 The circuit was simulated using a breadboard. After confirming the correctness, the buttons used for piano were soldered to a
 circuit board to enhance the connection stability and reduce occupied space.
 <p align="center">
+  <img src="Images/circuit.png" width="250" />
   <img src="Images/draft-keyboard.png" width="250" />
   <img src="Images/keyboard-top.png" width="250" /> 
   <img src="Images/keyboard-back.png" width="250" /><br>
@@ -69,7 +70,11 @@ inputs, and the fan can be turned on and off in response to the sensor data. The
 Upon receiving a message, Unity processes it and executes corresponding actions within the scene. For example, when a white key on the piano is pressed, unity will generate a tree at a random position according to pre-scripted functions.
 
 ## Demo
-building...
+<p align="center">
+  <img src="Images/thumbnail.jpg" width="500">
+</p>
+[YouTube](https://www.youtube.com/watch?v=I_KJoeDg2_g)
+
 
 ## Discussion
 Despite the efficiency of our interactive device in presenting a natural visual-auditory-sensory experience, user feedback highlighted several areas for enhancement: 
