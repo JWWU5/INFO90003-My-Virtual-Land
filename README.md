@@ -25,7 +25,7 @@ Stress and anxiety have been shown to be greatly reduced by immersive, interacti
 <p align="center">
   <img src="Images/final-product.png" width="500">
   <br>
-  <strong>Figure 1. Final product in showcase</strong>
+  <strong>Figure 1. Final Product in Showcase</strong>
 </p>
 
 ## System Design
@@ -45,17 +45,25 @@ The processed signals are sent to two types of output:
 - Unity: a game development platform, which is used to simulate the forest environment for this product.
 - Fan: a hardware device that can be controlled by ESP32.
 
+Hardware components are connected to the ESP32 microcontroller. They all have one terminal to GND, one to power, and another connected with the pins on ESP32.
+<p align="center">
+  <img src="Images/hardware-design.pngg" width="500">
+  <br>
+  <strong>Figure 3. Illustration of Hardware Connection</strong>
+</p>
+
 ## Implementation
 ### Hardware
-The circuit was simulated using a breadboard. After confirming the correctness, the buttons used for piano were soldered to a
-circuit board to enhance the connection stability and reduce occupied space.
+The circuit was simulated using a breadboard. After confirming the correctness, the buttons used for piano were soldered to a circuit board to enhance the connection stability and reduce occupied space.
 <p align="center">
   <img src="Images/circuit.png" width="250" />
   <img src="Images/draft-keyboard.png" width="250" />
+  <img src="Images/soldering.jpg" width="250" />
   <img src="Images/keyboard-top.png" width="250" /> 
-  <img src="Images/keyboard-back.png" width="250" /><br>
+  <img src="Images/keyboard-back.png" width="250" />
+  <img src="Images/device.png" width="250" /><br>
   <br>
-  <strong>Figure 3. Piano Keyboard Build Progress</strong>
+  <strong>Figure 4. Piano Keyboard Build Progress</strong>
 </p>
 
 ### Software
@@ -64,7 +72,7 @@ inputs, and the fan can be turned on and off in response to the sensor data. The
 <p align="center">
   <img src="Images/communication-script.png" width="500">
   <br>
-  <strong>Figure 4. Communication between ESP32 and Unity</strong>
+  <strong>Figure 5. Communication Between ESP32 and Unity</strong>
 </p>
 
 Upon receiving a message, Unity processes it and executes corresponding actions within the scene. For example, when a white key on the piano is pressed, unity will generate a tree at a random position according to pre-scripted functions.
@@ -73,7 +81,8 @@ Upon receiving a message, Unity processes it and executes corresponding actions 
 <p align="center">
   <img src="Images/thumbnail.jpg" width="500">
 </p>
-[YouTube](https://www.youtube.com/watch?v=I_KJoeDg2_g)
+
+[YouTube](https://youtu.be/OtpWD8sItxw?si=R6eQ3gljy-lVIFp3)
 
 
 ## Discussion
