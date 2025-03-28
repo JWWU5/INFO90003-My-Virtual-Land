@@ -47,7 +47,7 @@ The processed signals are sent to two types of output:
 
 Hardware components are connected to the ESP32 microcontroller. They all have one terminal to GND, one to power, and another connected with the pins on ESP32.
 <p align="center">
-  <img src="Images/hardware-design.pngg" width="500">
+  <img src="Images/hardware-design.png" width="500">
   <br>
   <strong>Figure 3. Illustration of Hardware Connection</strong>
 </p>
@@ -79,10 +79,15 @@ Upon receiving a message, Unity processes it and executes corresponding actions 
 
 ## Demo
 <p align="center">
-  <img src="Images/thumbnail.jpg" width="500">
+  <a href="https://youtu.be/OtpWD8sItxw?si=R6eQ3gljy-lVIFp3">
+    <img src="Images/thumbnail.jpg" width="500">  
+  </a>
 </p>
 
-[YouTube](https://youtu.be/OtpWD8sItxw?si=R6eQ3gljy-lVIFp3)
+Youtube [▶️](https://youtu.be/OtpWD8sItxw?si=R6eQ3gljy-lVIFp3)
+
+
+
 
 
 ## Discussion
