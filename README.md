@@ -1,6 +1,8 @@
 # My Virtual Land
 **INFO90003 Designing Novel Interactions, The University of Melbourne**
 
+🏆 **H1 Grade | Best Visual Design Award in class**
+
 ![Ideation](https://img.shields.io/badge/Ideation-FFC0CB?style=for-the-badge&logo=UXUI&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white)
